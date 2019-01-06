@@ -1,5 +1,9 @@
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
@@ -18,3 +22,5 @@ app.listen(port, () => {
   // eslint-disable-next-line
   console.log(`Server started on ${port}`);
 });
+
+exports.default = app;

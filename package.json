@@ -7,7 +7,7 @@
     "comp": "rimraf build && babel src -d build",
     "start": "npm run comp && node build/index.js",
     "dev-start": "nodemon -w src --exec npm run start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha --require babel-core/register tests/**/**.js --exit --timeout=20000"
   },
   "keywords": [],
   "author": "Olusola Ajayi",
@@ -18,6 +18,8 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -25,8 +27,11 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.3",
+    "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
+    "nyc": "^13.1.0",
     "prettier": "^1.15.3",
+    "request": "^2.88.0",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
