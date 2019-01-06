@@ -1,2 +1,3 @@
 # todos
 [![Build Status](https://travis-ci.com/ebzeal/todos.svg?branch=master)](https://travis-ci.com/ebzeal/todos)
+[![Coverage Status](https://coveralls.io/repos/github/ebzeal/todos/badge.svg?branch=master)](https://coveralls.io/github/ebzeal/todos?branch=master)
