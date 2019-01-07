@@ -7,7 +7,8 @@
     "comp": "rimraf build && babel src -d build",
     "start": "npm run comp && node build/index.js",
     "dev-start": "nodemon -w src --exec npm run start",
-    "test": "nyc mocha --require babel-core/register tests/**/**.js && nyc report --reporter=text-lcov | coveralls --exit --timeout=20000"
+    "test": "nyc mocha --require babel-core/register tests/**/**.js --exit --timeout=20000",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [],
   "author": "Olusola Ajayi",
