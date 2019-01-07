@@ -7,7 +7,7 @@
     "comp": "rimraf build && babel src -d build",
     "start": "npm run comp && node build/index.js",
     "dev-start": "nodemon -w src --exec npm run start",
-    "test": "nyc mocha --require babel-core/register tests/**/**.js --exit --timeout=20000"
+    "test": "nyc mocha --require babel-core/register tests/**/**.js && nyc report --reporter=text-lcov | coveralls --exit --timeout=20000"
   },
   "keywords": [],
   "author": "Olusola Ajayi",
@@ -20,6 +20,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "coveralls": "^3.0.2",
     "eslint": "^5.12.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^3.3.0",
@@ -28,6 +29,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.3",
     "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "nodemon": "^1.18.9",
     "nyc": "^13.1.0",
     "prettier": "^1.15.3",
