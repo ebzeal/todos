@@ -5,7 +5,7 @@ import chaiHttp from 'chai-http';
 import app from '../src/index';
 
 chai.use(chaiHttp);
-const expect = chai.expect;
+const { expect } = chai;
 
 describe('Checks page routes', () => {
   describe('checks landing url. GET /', () => {
